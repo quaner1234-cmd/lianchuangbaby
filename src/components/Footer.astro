@@ -1,0 +1,100 @@
+---
+---
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Custom Baby Sleeping Bag</div>
+      <p>Taian Lianchuang Textile Co., Ltd.</p>
+      <p>Tianzhufeng Road, Tai'an City<br/>Shandong Province, China 271000</p>
+      <div class="footer-certs">
+        <span>🌱 GOTS Certified</span>
+        <span>✅ BSCI Audited</span>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-heading">Products</div>
+      <a href="/products/tog-05">TOG 0.5 Summer Bag</a>
+      <a href="/products/tog-10">TOG 1.0 All-Season</a>
+      <a href="/products/tog-25">TOG 2.5 Winter Bag</a>
+      <a href="/products/tog-35">TOG 3.5 Cold Climate</a>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-heading">Services</div>
+      <a href="/#oem">OEM / ODM</a>
+      <a href="/#materials">Material Options</a>
+      <a href="/#certifications">Certifications</a>
+      <a href="/blog">Industry Blog</a>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-heading">Contact</div>
+      <a href="https://wa.me/8618265381705">WhatsApp: +86 182 6538 1705</a>
+      <a href="https://wa.me/8618265381705">WeChat: +86 182 6538 1705</a>
+      <a href="/#contact">Send an Inquiry</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom container">
+    <p>© {new Date().getFullYear()} Taian Lianchuang Textile Co., Ltd. All rights reserved.</p>
+    <p>Custom Baby Sleeping Bag Manufacturer · GOTS & BSCI Certified · OEM/ODM Factory China</p>
+  </div>
+</footer>
+
+<style>
+.footer {
+  background: var(--warm);
+  color: rgba(255,255,255,0.65);
+  padding: 64px 0 0;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; color: white;
+  margin-bottom: 0.75rem;
+}
+.footer-brand p {
+  font-size: 0.82rem; line-height: 1.8;
+}
+.footer-certs {
+  display: flex; gap: 0.75rem; flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.footer-certs span {
+  font-size: 0.75rem; background: rgba(255,255,255,0.1);
+  border-radius: 50px; padding: 0.2rem 0.7rem;
+  color: rgba(255,255,255,0.8);
+}
+.footer-col { display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-heading {
+  font-size: 0.72rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: white;
+  font-weight: 600; margin-bottom: 0.25rem;
+}
+.footer-col a {
+  font-size: 0.82rem; color: rgba(255,255,255,0.55);
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--peach); }
+.footer-bottom {
+  padding: 1.5rem 5%;
+  font-size: 0.75rem;
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  justify-content: space-between;
+  opacity: 0.5;
+}
+@media (max-width: 768px) {
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 480px) {
+  .footer-inner { grid-template-columns: 1fr; }
+}
+</style>

@@ -1,0 +1,122 @@
+---
+const navLinks = [
+  { href: "/#products", label: "Products" },
+  { href: "/#materials", label: "Materials" },
+  { href: "/#certifications", label: "Certifications" },
+  { href: "/#oem", label: "OEM/ODM" },
+  { href: "/blog", label: "Blog" },
+  { href: "/#contact", label: "Contact" },
+];
+---
+
+<nav class="nav" id="nav">
+  <div class="nav-inner container">
+    <a href="/" class="nav-logo">
+      <span class="logo-main">Custom Baby Sleeping Bag</span>
+      <span class="logo-sub">Lianchuang Textile · Since 2010</span>
+    </a>
+
+    <ul class="nav-links">
+      {navLinks.map(link => (
+        <li><a href={link.href}>{link.label}</a></li>
+      ))}
+    </ul>
+
+    <a href="/#contact" class="btn btn-primary nav-cta">Get a Quote</a>
+
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="nav-mobile" id="mobile-menu">
+    {navLinks.map(link => (
+      <a href={link.href} class="mobile-link">{link.label}</a>
+    ))}
+    <a href="/#contact" class="btn btn-primary" style="margin-top:1rem;">Get a Quote</a>
+  </div>
+</nav>
+
+<style>
+.nav {
+  position: fixed; top: 0; width: 100%; z-index: 200;
+  background: rgba(250,246,240,0.93);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(216,180,154,0.3);
+  transition: box-shadow 0.3s;
+}
+.nav.scrolled { box-shadow: 0 4px 24px rgba(92,61,46,0.08); }
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 72px; gap: 2rem;
+}
+.nav-logo { line-height: 1.25; }
+.logo-main {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem; font-weight: 600;
+  color: var(--warm);
+}
+.logo-sub {
+  display: block;
+  font-size: 0.68rem; color: var(--text-light);
+  letter-spacing: 0.06em; font-weight: 400;
+}
+.nav-links {
+  display: flex; list-style: none; gap: 1.8rem; flex: 1; justify-content: center;
+}
+.nav-links a {
+  font-size: 0.85rem; font-weight: 500; color: var(--text-light);
+  transition: color 0.2s; position: relative;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
+  height: 1.5px; background: var(--blush);
+  transform: scaleX(0); transition: transform 0.2s;
+}
+.nav-links a:hover { color: var(--blush); }
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-cta { font-size: 0.82rem; padding: 0.6rem 1.4rem; white-space: nowrap; }
+.nav-burger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.nav-burger span {
+  display: block; width: 24px; height: 2px;
+  background: var(--warm); border-radius: 2px;
+  transition: all 0.2s;
+}
+.nav-mobile {
+  display: none; flex-direction: column; padding: 1.5rem 5% 2rem;
+  background: var(--cream); border-top: 1px solid var(--border);
+}
+.nav-mobile.open { display: flex; }
+.mobile-link {
+  padding: 0.75rem 0; font-size: 1rem; color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 900px) {
+  .nav-links, .nav-cta { display: none; }
+  .nav-burger { display: flex; }
+}
+</style>
+
+<script>
+  const nav = document.getElementById('nav');
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  window.addEventListener('scroll', () => {
+    nav?.classList.toggle('scrolled', window.scrollY > 30);
+  });
+
+  burger?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('open');
+  });
+
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+</script>

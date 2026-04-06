@@ -1,0 +1,258 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+export function getStaticPaths() {
+  return [
+    {
+      params: { tog: 'tog-05' },
+      props: {
+        rating: "0.5", season: "Summer", icon: "☀️",
+        temp: "24–27°C",
+        color: "#5A9BBF",
+        title: "TOG 0.5 Baby Sleeping Bag — Custom Summer Sleep Bag Manufacturer",
+        description: "Factory-direct custom TOG 0.5 summer baby sleeping bags. Lightweight organic cotton and bamboo. OEM/ODM, GOTS certified, low MOQ from 300 pcs.",
+        intro: "The lightest sleeping bag in our range — designed for warm summer nights and travel. Perfect for brands targeting warm-weather markets or year-round stocking. Breathable organic cotton and bamboo options.",
+        useCases: ["Summer collections", "Travel & holiday ranges", "Tropical climate markets", "Layering piece for air-conditioned rooms"],
+        materials: ["Organic cotton jersey (GOTS)", "Bamboo viscose blend", "Organic cotton muslin"],
+      }
+    },
+    {
+      params: { tog: 'tog-10' },
+      props: {
+        rating: "1.0", season: "All-Season", icon: "🌤️",
+        temp: "20–24°C",
+        color: "#7A9E7E",
+        title: "TOG 1.0 Baby Sleeping Bag — Custom All-Season Sleep Bag Manufacturer",
+        description: "Factory-direct custom TOG 1.0 all-season baby sleeping bags. Best-selling weight for year-round stocking. OEM/ODM, GOTS certified, low MOQ.",
+        intro: "Our best-selling TOG weight — versatile enough for spring, summer nights, and early autumn. The go-to choice for brands that want a single year-round SKU. Available in all three fabric options.",
+        useCases: ["Year-round bestseller SKU", "Spring / early autumn collections", "European & North American markets", "Starter product for new baby brands"],
+        materials: ["Organic cotton interlock (GOTS)", "Bamboo viscose blend", "Merino wool fine gauge"],
+      }
+    },
+    {
+      params: { tog: 'tog-25' },
+      props: {
+        rating: "2.5", season: "Winter", icon: "🍂",
+        temp: "16–20°C",
+        color: "#D4896A",
+        title: "TOG 2.5 Baby Sleeping Bag — Custom Winter Sleep Bag Manufacturer",
+        description: "Factory-direct custom TOG 2.5 winter baby sleeping bags. Warm and cozy for autumn/winter. OEM/ODM, GOTS certified, low MOQ from 300 pcs.",
+        intro: "Warm and cozy for autumn and winter nights. Highly popular with European and North American buyers. Premium fill options including recycled polyester and organic cotton wadding.",
+        useCases: ["Autumn / winter main collection", "European & Scandinavian markets", "Gift sets and premium bundles", "Cold-room households"],
+        materials: ["Organic cotton interlock + cotton fill (GOTS)", "Bamboo outer + polyester fill", "Merino wool blend"],
+      }
+    },
+    {
+      params: { tog: 'tog-35' },
+      props: {
+        rating: "3.5", season: "Cold Climate", icon: "❄️",
+        temp: "12–16°C",
+        color: "#7B68EE",
+        title: "TOG 3.5 Baby Sleeping Bag — Custom Cold Climate Sleep Bag Manufacturer",
+        description: "Factory-direct custom TOG 3.5 cold-climate baby sleeping bags. Maximum warmth for Nordic and cold markets. OEM/ODM, GOTS certified, low MOQ.",
+        intro: "Maximum warmth for the coldest nights. Developed for Nordic, Canadian, and mountain-climate markets. Premium merino wool and heavyweight fill options available.",
+        useCases: ["Nordic & Scandinavian markets", "Canadian & mountain climates", "Premium winter gift sets", "Cold-room households below 16°C"],
+        materials: ["Merino wool outer + wool fill", "Organic cotton + heavy recycled fill", "Fleece-lined organic cotton"],
+      }
+    },
+  ];
+}
+
+const { rating, season, icon, temp, color, title, description, intro, useCases, materials } = Astro.props;
+---
+
+<Base title={title} description={description}>
+  <Nav />
+
+  <section class="product-hero" style={`--tog-color: ${color};`}>
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/#products">Products</a> <span>›</span>
+        <span>TOG {rating}</span>
+      </div>
+
+      <div class="product-hero-inner">
+        <div class="product-hero-content">
+          <div class="tog-badge">
+            <span class="tog-icon">{icon}</span>
+            <span>TOG {rating} · {season}</span>
+          </div>
+
+          <h1>Custom TOG {rating} Baby Sleeping Bag</h1>
+          <p class="product-intro">{intro}</p>
+
+          <div class="product-meta">
+            <div class="meta-item">
+              <span class="meta-label">Room Temperature</span>
+              <span class="meta-value">{temp}</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Min. Order</span>
+              <span class="meta-value">300 pcs/style</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Sample Lead Time</span>
+              <span class="meta-value">10–15 days</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Bulk Lead Time</span>
+              <span class="meta-value">30–45 days</span>
+            </div>
+          </div>
+
+          <div class="product-actions">
+            <a href="/#contact" class="btn btn-primary">Request Sample →</a>
+            <a href="/#contact" class="btn btn-outline">Get Pricing</a>
+          </div>
+        </div>
+
+        <div class="product-visual-wrap">
+          <div class="product-visual-card card">
+            <div class="product-big-icon">{icon}</div>
+            <div class="product-cert-pills">
+              <span class="pill pill-green">🌱 GOTS</span>
+              <span class="pill pill-peach">✅ BSCI</span>
+              <span class="pill pill-cream">🛡️ EN 16781</span>
+              <span class="pill pill-cream">OEM/ODM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-details">
+    <div class="container product-grid">
+
+      <div class="detail-card card">
+        <h3>Ideal Use Cases</h3>
+        <ul class="use-list">
+          {useCases.map(uc => <li>{uc}</li>)}
+        </ul>
+      </div>
+
+      <div class="detail-card card">
+        <h3>Available Materials</h3>
+        <ul class="use-list">
+          {materials.map(m => <li>{m}</li>)}
+        </ul>
+      </div>
+
+      <div class="detail-card card">
+        <h3>Customization Options</h3>
+        <ul class="use-list">
+          <li>Custom colors (Pantone matched)</li>
+          <li>All-over & placement prints</li>
+          <li>Embroidered logos & labels</li>
+          <li>2-way zipper / safety flap</li>
+          <li>Custom sizing & grading</li>
+          <li>Private label & packaging</li>
+        </ul>
+      </div>
+
+      <div class="detail-card card">
+        <h3>Standard Size Range</h3>
+        <ul class="use-list">
+          <li>Newborn (0–3 months)</li>
+          <li>Small (3–9 months)</li>
+          <li>Medium (9–18 months)</li>
+          <li>Large (18–36 months)</li>
+          <li>Custom sizes on request</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="product-cta section-sm">
+    <div class="container cta-inner">
+      <h2>Ready to Customize Your TOG {rating} Sleeping Bag?</h2>
+      <p>Send us your requirements and we'll reply with pricing and sample details within 24 hours.</p>
+      <a href="/#contact" class="btn btn-primary">Start Your Inquiry →</a>
+    </div>
+  </section>
+
+  <Footer />
+</Base>
+
+<style>
+.product-hero {
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, var(--cream), var(--cream-dark));
+  border-bottom: 1px solid var(--border);
+}
+.breadcrumb {
+  font-size: 0.78rem; color: var(--text-light);
+  display: flex; gap: 0.5rem; align-items: center;
+  margin-bottom: 2.5rem;
+}
+.breadcrumb a { color: var(--text-light); }
+.breadcrumb a:hover { color: var(--blush); }
+.product-hero-inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; align-items: center;
+}
+.tog-badge {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  background: rgba(255,255,255,0.7); border: 1px solid var(--border);
+  border-radius: 50px; padding: 0.35rem 1rem;
+  font-size: 0.85rem; font-weight: 500; color: var(--warm);
+  margin-bottom: 1rem; border-left: 3px solid var(--tog-color);
+}
+.tog-icon { font-size: 1.2rem; }
+.product-hero h1 {
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  color: var(--warm); margin-bottom: 1rem;
+}
+.product-intro { font-size: 1rem; color: var(--text-light); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
+.product-meta {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0.8rem; margin-bottom: 2rem;
+}
+.meta-item {
+  background: white; border-radius: 14px; padding: 0.8rem 1rem;
+  border: 1px solid var(--border);
+}
+.meta-label { display: block; font-size: 0.7rem; color: var(--text-light); letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+.meta-value { font-size: 0.92rem; font-weight: 600; color: var(--warm); }
+.product-actions { display: flex; gap: 1rem; }
+.product-big-icon {
+  font-size: 8rem; text-align: center; padding: 2rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.8), var(--cream-dark));
+  border-radius: 16px; margin-bottom: 1.2rem;
+}
+.product-cert-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.product-details { background: white; }
+.product-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; }
+.detail-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem; color: var(--warm); margin-bottom: 1rem;
+  padding-bottom: 0.6rem; border-bottom: 1px solid var(--border);
+}
+.use-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.use-list li {
+  font-size: 0.88rem; color: var(--text-light);
+  padding-left: 1.2rem; position: relative; line-height: 1.5;
+}
+.use-list li::before {
+  content: '→'; position: absolute; left: 0;
+  color: var(--blush); font-size: 0.75rem;
+}
+.product-cta { background: var(--warm); }
+.cta-inner { text-align: center; }
+.product-cta h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  color: white; margin-bottom: 0.8rem;
+}
+.product-cta p { color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+.product-cta .btn-primary { background: var(--peach); }
+.product-cta .btn-primary:hover { background: var(--blush); }
+
+@media (max-width: 768px) {
+  .product-hero-inner, .product-grid { grid-template-columns: 1fr; }
+  .product-meta { grid-template-columns: 1fr 1fr; }
+}
+</style>
