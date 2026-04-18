@@ -111,7 +111,17 @@ import Footer from '../components/Footer.astro';
         <p class="section-sub">Every TOG rating is available in all three fabric options. Custom sizing, colors, prints, and labeling included.</p>
       </div>
 
-      <div class="tog-grid">
+      <div class="tog-grid tog-grid-5">
+        <a href="/products/premium-muslin-muted-tones" class="tog-card card tog-muted tog-card-featured">
+          <div class="tog-season-icon">🌿</div>
+          <div class="tog-number" style="font-size:1.6rem;line-height:1.2;">Muted<br/>Tones</div>
+          <div class="tog-name">Premium Muslin – Summer Series</div>
+          <div class="tog-temp">0.5 TOG · Room temp 24–27°C</div>
+          <p class="tog-desc">Sage Green, Terracotta &amp; Sand — the 2026 "Emotional Parenting" palette. Organic muslin, OEKO-TEX certified, OEM/ODM ready.</p>
+          <div class="tog-featured-badge">New Launch</div>
+          <div class="tog-link">View Full Listing →</div>
+        </a>
+
         <a href="/products/tog-05" class="tog-card card tog-summer">
           <div class="tog-season-icon">☀️</div>
           <div class="tog-number">0.5</div>
@@ -479,6 +489,15 @@ import Footer from '../components/Footer.astro';
 .section-header { text-align: center; margin-bottom: 3rem; }
 .section-header .section-sub { margin: 0 auto; }
 .tog-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.2rem; margin-bottom: 1.5rem; }
+.tog-grid-5 { grid-template-columns: repeat(5,1fr); }
+.tog-muted { border-top-color: #87a878; }
+.tog-card-featured { position: relative; }
+.tog-featured-badge {
+  display: inline-block; background: #87a878; color: white;
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em;
+  padding: 0.2rem 0.6rem; border-radius: 50px;
+  text-transform: uppercase; margin-bottom: 0.5rem;
+}
 .tog-card {
   display: block; text-decoration: none; color: inherit;
   border-top: 4px solid transparent; position: relative;
@@ -591,8 +610,12 @@ import Footer from '../components/Footer.astro';
 .whatsapp-btn { font-size: 1rem; }
 
 /* Responsive */
+@media (max-width: 1200px) {
+  .tog-grid-5 { grid-template-columns: repeat(3,1fr); }
+}
 @media (max-width: 1024px) {
   .tog-grid { grid-template-columns: repeat(2,1fr); }
+  .tog-grid-5 { grid-template-columns: repeat(2,1fr); }
 }
 @media (max-width: 900px) {
   .hero-inner, .oem-inner, .cert-inner, .contact-inner { grid-template-columns: 1fr; }
