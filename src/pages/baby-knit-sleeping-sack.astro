@@ -1,0 +1,447 @@
+---
+const title = "Baby Knit Sleeping Sack Supplier | China Knit Sack Manufacturer";
+const description = "Custom baby knit sleeping sacks from a GOTS certified Chinese factory. Waffle knit, rib knit, organic cotton & bamboo. OEM private label, MOQ 300 pcs.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1a1a;
+      --muted: #6b6b6b;
+      --line: #e0dbd4;
+      --bg: #faf9f7;
+      --warm: #f4f1ec;
+      --accent: #2d5a3d;
+      --accent-light: #e8f0eb;
+      --sand: #c9b99a;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 5vw;
+      border-bottom: 1px solid var(--line);
+    }
+    .logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-cta {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      padding: 0.5rem 1.1rem;
+      border-radius: 2px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-cta:hover { background: var(--accent); color: #fff; }
+
+    /* HERO — split layout */
+    .hero-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 5vw 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    @media (max-width: 640px) {
+      .hero-wrap { grid-template-columns: 1fr; gap: 2rem; padding-top: 3rem; }
+      .hero-visual { display: none; }
+    }
+    .breadcrumb {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.9rem 2rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: opacity 0.2s;
+    }
+    .hero-cta:hover { opacity: 0.88; }
+
+    /* VISUAL placeholder — texture block */
+    .hero-visual {
+      background: var(--warm);
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      aspect-ratio: 4/5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .knit-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 4px;
+      width: 100%;
+      max-width: 180px;
+    }
+    .knit-cell {
+      aspect-ratio: 1;
+      border-radius: 2px;
+      background: var(--sand);
+      opacity: 0.4;
+    }
+    .knit-cell:nth-child(3n) { opacity: 0.7; }
+    .knit-cell:nth-child(5n) { opacity: 0.2; }
+    .visual-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .certs {
+      background: var(--warm);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 1.25rem 5vw;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .cert-tag {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-light);
+      padding: 0.35rem 0.9rem;
+      border-radius: 2px;
+    }
+
+    section { max-width: 900px; margin: 0 auto; padding: 4rem 5vw; }
+    section + section { border-top: 1px solid var(--line); }
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin-bottom: 1.75rem;
+    }
+    p { color: var(--muted); margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* FABRIC CARDS */
+    .fabric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+    }
+    .fabric-card {
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .fabric-swatch {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .swatch-waffle { background: repeating-linear-gradient(0deg, var(--warm) 0px, var(--warm) 6px, #e8e1d6 6px, #e8e1d6 7px), repeating-linear-gradient(90deg, var(--warm) 0px, var(--warm) 6px, #e8e1d6 6px, #e8e1d6 7px); }
+    .swatch-rib { background: repeating-linear-gradient(90deg, var(--warm) 0px, var(--warm) 5px, #ddd5c8 5px, #ddd5c8 7px); }
+    .swatch-bamboo { background: linear-gradient(135deg, #e8f0eb 0%, #d4e8d8 50%, #e8f0eb 100%); }
+    .swatch-organic { background: linear-gradient(135deg, #f5efe6 0%, #ede3d5 50%, #f5efe6 100%); }
+    .fabric-info { padding: 1.1rem; }
+    .fabric-name { font-weight: 500; color: var(--ink); margin-bottom: 0.25rem; font-size: 0.95rem; }
+    .fabric-detail { font-size: 0.83rem; color: var(--muted); }
+
+    /* SPEC TABLE */
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    th {
+      text-align: left;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 0.75rem 1rem;
+      border-bottom: 2px solid var(--line);
+    }
+    td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--line);
+      color: var(--ink);
+    }
+    tr:last-child td { border-bottom: none; }
+    td.muted { color: var(--muted); }
+
+    /* FAQ */
+    .faq-list { list-style: none; }
+    .faq-item {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-weight: 500; color: var(--ink); margin-bottom: 0.4rem; }
+    .faq-a { font-size: 0.9rem; color: var(--muted); }
+
+    .cta-block {
+      background: var(--accent);
+      color: #fff;
+      padding: 3.5rem 5vw;
+      text-align: center;
+    }
+    .cta-block h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+    .cta-block p { color: rgba(255,255,255,0.75); margin-bottom: 1.75rem; }
+    .cta-email {
+      display: inline-block;
+      background: #fff;
+      color: var(--accent);
+      padding: 0.9rem 2rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: opacity 0.2s;
+    }
+    .cta-email:hover { opacity: 0.9; }
+
+    footer {
+      text-align: center;
+      padding: 2rem 5vw;
+      border-top: 1px solid var(--line);
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo">Lianchuang Baby</a>
+    <a href="mailto:quaner1234@gmail.com?subject=Baby Knit Sleeping Sack Inquiry" class="nav-cta">Get a Quote</a>
+  </nav>
+
+  <div>
+    <div class="hero-wrap">
+      <div class="hero-text">
+        <div class="breadcrumb">
+          <a href="/">Home</a> &nbsp;/&nbsp; Baby Knit Sleeping Sack
+        </div>
+        <h1>Baby Knit Sleeping Sack — China Supplier</h1>
+        <p class="hero-sub">Waffle knit, rib knit, bamboo & organic cotton. GOTS certified factory. OEM/ODM, private label, MOQ from 300 pcs.</p>
+        <a href="mailto:quaner1234@gmail.com?subject=Baby Knit Sleeping Sack Inquiry" class="hero-cta">Email Us Your Specs →</a>
+      </div>
+      <div class="hero-visual">
+        <div class="knit-grid">
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+          <div class="knit-cell"></div>
+        </div>
+        <div class="visual-label">Knit texture illustration</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="certs">
+    <span class="cert-tag">GOTS Certified</span>
+    <span class="cert-tag">BSCI Audited</span>
+    <span class="cert-tag">Waffle Knit</span>
+    <span class="cert-tag">Rib Knit</span>
+    <span class="cert-tag">MOQ from 300 pcs</span>
+  </div>
+
+  <section>
+    <h2>Knit Fabric Options</h2>
+    <div class="fabric-grid">
+      <div class="fabric-card">
+        <div class="fabric-swatch swatch-waffle"></div>
+        <div class="fabric-info">
+          <div class="fabric-name">Classic Square Waffle</div>
+          <div class="fabric-detail">Textured grid construction. Breathable, good stretch recovery. Popular for 1.0–2.5 TOG.</div>
+        </div>
+      </div>
+      <div class="fabric-card">
+        <div class="fabric-swatch swatch-rib"></div>
+        <div class="fabric-info">
+          <div class="fabric-name">Vertical Rib Knit</div>
+          <div class="fabric-detail">Clean vertical texture, excellent drape. Often used for 0.5–1.0 TOG summer sacks.</div>
+        </div>
+      </div>
+      <div class="fabric-card">
+        <div class="fabric-swatch swatch-bamboo"></div>
+        <div class="fabric-info">
+          <div class="fabric-name">Bamboo Knit</div>
+          <div class="fabric-detail">Ultra-soft, thermoregulating. Ideal for sensitive skin. GOTS-certified available.</div>
+        </div>
+      </div>
+      <div class="fabric-card">
+        <div class="fabric-swatch swatch-organic"></div>
+        <div class="fabric-info">
+          <div class="fabric-name">Organic Cotton Knit</div>
+          <div class="fabric-detail">GOTS certified. Durable, easy-care, works for 1.0–3.5 TOG with appropriate filling.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Standard Specifications</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Spec</th>
+          <th>Options / Range</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>TOG Rating</td>
+          <td class="muted">0.5 / 1.0 / 2.5 (custom available)</td>
+        </tr>
+        <tr>
+          <td>Sizes</td>
+          <td class="muted">0–6M / 6–18M / 18–36M (custom sizing available)</td>
+        </tr>
+        <tr>
+          <td>Fabric Weight</td>
+          <td class="muted">180–280 gsm depending on construction and TOG</td>
+        </tr>
+        <tr>
+          <td>Closure</td>
+          <td class="muted">2-way zip, shoulder snap, or combination</td>
+        </tr>
+        <tr>
+          <td>Arm opening</td>
+          <td class="muted">Sleeveless standard; with sleeves available</td>
+        </tr>
+        <tr>
+          <td>MOQ</td>
+          <td class="muted">300 pcs per colorway / style</td>
+        </tr>
+        <tr>
+          <td>Sample lead time</td>
+          <td class="muted">15–20 days</td>
+        </tr>
+        <tr>
+          <td>Bulk lead time</td>
+          <td class="muted">45–60 days after sample approval</td>
+        </tr>
+        <tr>
+          <td>Certifications</td>
+          <td class="muted">GOTS (organic), BSCI (social compliance)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <ul class="faq-list">
+      <li class="faq-item">
+        <div class="faq-q">What is a knit sleeping sack vs. a woven sleeping bag?</div>
+        <div class="faq-a">Knit fabric has natural stretch, giving the sack a soft, body-conforming fit. Woven sleeping bags use tighter non-stretch fabric, which is more structured. Knit sacks are increasingly preferred for loungewear-style aesthetics and comfort.</div>
+      </li>
+      <li class="faq-item">
+        <div class="faq-q">Can I get GOTS certification documentation?</div>
+        <div class="faq-a">Yes. Our factory holds GOTS certification. Transaction certificates and scope certificates are available upon request.</div>
+      </li>
+      <li class="faq-item">
+        <div class="faq-q">Can you match a Pantone color for the knit?</div>
+        <div class="faq-a">Yes, we can dye to a target Pantone reference. A lab dip will be sent for your approval before bulk production.</div>
+      </li>
+      <li class="faq-item">
+        <div class="faq-q">Do you offer different TOG ratings in the same style?</div>
+        <div class="faq-a">Yes. The same knit sack design can be produced in multiple TOG ratings by adjusting the filling weight. MOQ applies per TOG variant.</div>
+      </li>
+      <li class="faq-item">
+        <div class="faq-q">What's the minimum order quantity?</div>
+        <div class="faq-a">300 pieces per colorway/style. For mixed colors of the same style, please enquire for combined MOQ options.</div>
+      </li>
+    </ul>
+  </section>
+
+  <div class="cta-block">
+    <h2>Source Baby Knit Sleeping Sacks Direct from Factory</h2>
+    <p>Share your design reference, fabric choice, TOG, and quantity. We'll respond within 24 hours.</p>
+    <a href="mailto:quaner1234@gmail.com?subject=Baby Knit Sleeping Sack Inquiry" class="cta-email">
+      quaner1234@gmail.com
+    </a>
+  </div>
+
+  <footer>
+    <p>© {new Date().getFullYear()} Taian Lianchuang Textile Co., Ltd. &nbsp;·&nbsp; <a href="/">lianchuangbaby.com</a></p>
+  </footer>
+
+</body>
+</html>

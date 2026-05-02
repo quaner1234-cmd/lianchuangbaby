@@ -1,0 +1,398 @@
+---
+const title = "China Baby Sleeping Bag Supplier | OEM & ODM Manufacturer";
+const description = "Taian Lianchuang – GOTS & BSCI certified baby sleeping bag supplier from China. Custom TOG ratings, organic fabrics, low MOQ. Get a factory quote today.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1a1a;
+      --muted: #6b6b6b;
+      --line: #e0dbd4;
+      --bg: #faf9f7;
+      --warm: #f4f1ec;
+      --accent: #2d5a3d;
+      --accent-light: #e8f0eb;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 5vw;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg);
+    }
+    .logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-cta {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      padding: 0.5rem 1.1rem;
+      border-radius: 2px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-cta:hover { background: var(--accent); color: #fff; }
+
+    /* HERO */
+    .hero {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 5vw 4rem;
+    }
+    .breadcrumb {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+      max-width: 700px;
+    }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 580px;
+      margin-bottom: 2.5rem;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.9rem 2rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: opacity 0.2s;
+    }
+    .hero-cta:hover { opacity: 0.88; }
+
+    /* CERTS STRIP */
+    .certs {
+      background: var(--warm);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 1.25rem 5vw;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .cert-tag {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-light);
+      padding: 0.35rem 0.9rem;
+      border-radius: 2px;
+    }
+
+    /* SECTIONS */
+    section { max-width: 900px; margin: 0 auto; padding: 4rem 5vw; }
+    section + section { border-top: 1px solid var(--line); }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin-bottom: 1.75rem;
+      color: var(--ink);
+    }
+    p { color: var(--muted); margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* CAPABILITY GRID */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+    .card {
+      background: var(--warm);
+      border: 1px solid var(--line);
+      padding: 1.5rem;
+      border-radius: 3px;
+    }
+    .card-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .card-value {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.35rem;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+    .card p { font-size: 0.88rem; margin: 0; }
+
+    /* PRODUCT TABLE */
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    th {
+      text-align: left;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 0.75rem 1rem;
+      border-bottom: 2px solid var(--line);
+    }
+    td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--line);
+      color: var(--ink);
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    td.muted { color: var(--muted); }
+
+    /* PROCESS */
+    .process-list { list-style: none; counter-reset: steps; }
+    .process-list li {
+      counter-increment: steps;
+      display: grid;
+      grid-template-columns: 2.5rem 1fr;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .process-list li:last-child { border-bottom: none; }
+    .step-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: var(--line);
+      line-height: 1;
+      padding-top: 0.15rem;
+    }
+    .step-num::before { content: counter(steps, decimal-leading-zero); }
+    .step-title { font-weight: 500; color: var(--ink); margin-bottom: 0.25rem; font-size: 0.95rem; }
+    .step-desc { font-size: 0.88rem; color: var(--muted); }
+
+    /* CTA BLOCK */
+    .cta-block {
+      background: var(--accent);
+      color: #fff;
+      padding: 3.5rem 5vw;
+      text-align: center;
+    }
+    .cta-block h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+    .cta-block p { color: rgba(255,255,255,0.75); margin-bottom: 1.75rem; }
+    .cta-email {
+      display: inline-block;
+      background: #fff;
+      color: var(--accent);
+      padding: 0.9rem 2rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: opacity 0.2s;
+    }
+    .cta-email:hover { opacity: 0.9; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem 5vw;
+      border-top: 1px solid var(--line);
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo">Lianchuang Baby</a>
+    <a href="mailto:quaner1234@gmail.com?subject=Baby Sleeping Bag Inquiry" class="nav-cta">Get a Quote</a>
+  </nav>
+
+  <div class="hero">
+    <div class="breadcrumb">
+      <a href="/">Home</a> &nbsp;/&nbsp; Baby Sleeping Bag Supplier
+    </div>
+    <h1>China Baby Sleeping Bag Supplier — Factory Direct</h1>
+    <p class="hero-sub">GOTS & BSCI certified manufacturer. Custom TOG ratings, organic cotton & bamboo fabrics, OEM/ODM service. MOQ from 300 pcs per style.</p>
+    <a href="mailto:quaner1234@gmail.com?subject=Baby Sleeping Bag Inquiry" class="hero-cta">Email Us Your Requirements →</a>
+  </div>
+
+  <div class="certs">
+    <span class="cert-tag">GOTS Certified</span>
+    <span class="cert-tag">BSCI Audited</span>
+    <span class="cert-tag">OEM / ODM</span>
+    <span class="cert-tag">MOQ from 300 pcs</span>
+    <span class="cert-tag">Factory Direct Pricing</span>
+  </div>
+
+  <section>
+    <h2>Factory Capabilities</h2>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-label">MOQ</div>
+        <div class="card-value">300 pcs</div>
+        <p>Per colorway / style. Lower MOQ available for repeat clients.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Sample Lead Time</div>
+        <div class="card-value">15–20 days</div>
+        <p>Pre-production samples with your branding and labels.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Bulk Lead Time</div>
+        <div class="card-value">45–60 days</div>
+        <p>After sample approval and deposit received.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Certifications</div>
+        <div class="card-value">GOTS · BSCI</div>
+        <p>Full audit documentation available on request.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Fabrics</div>
+        <div class="card-value">Organic · Bamboo</div>
+        <p>Organic cotton, bamboo jersey, bamboo fleece, waffle knit.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Markets Served</div>
+        <div class="card-value">EU · US · AU</div>
+        <p>Familiar with EN 16781, ASTM F3268, and AS/NZS standards.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Product Range</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>TOG Options</th>
+          <th>Sizes</th>
+          <th>Key Fabric</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Classic Baby Sleeping Bag</td>
+          <td class="muted">0.5 / 1.0 / 2.5 / 3.5</td>
+          <td class="muted">0–6M / 6–18M / 18–36M</td>
+          <td class="muted">Organic cotton shell</td>
+        </tr>
+        <tr>
+          <td>Bamboo Sleeping Bag</td>
+          <td class="muted">0.5 / 1.0</td>
+          <td class="muted">0–6M / 6–18M / 18–36M</td>
+          <td class="muted">Bamboo jersey</td>
+        </tr>
+        <tr>
+          <td>Knit Sleeping Sack</td>
+          <td class="muted">1.0 / 2.5</td>
+          <td class="muted">0–6M / 6–18M</td>
+          <td class="muted">Waffle / rib knit</td>
+        </tr>
+        <tr>
+          <td>Weighted Sleeping Bag</td>
+          <td class="muted">Custom</td>
+          <td class="muted">6–18M / 18–36M</td>
+          <td class="muted">Cotton twill + filler</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>How We Work</h2>
+    <ol class="process-list">
+      <li>
+        <span class="step-num"></span>
+        <div>
+          <div class="step-title">Send Your Inquiry</div>
+          <div class="step-desc">Email us your product reference, target TOG, fabric preference, and estimated order quantity.</div>
+        </div>
+      </li>
+      <li>
+        <span class="step-num"></span>
+        <div>
+          <div class="step-title">Receive FOB Quote</div>
+          <div class="step-desc">We respond within 1 business day with itemized pricing, fabric options, and lead times.</div>
+        </div>
+      </li>
+      <li>
+        <span class="step-num"></span>
+        <div>
+          <div class="step-title">Sample Development</div>
+          <div class="step-desc">Pre-production sample made to your specs. Physical sample shipped for your approval.</div>
+        </div>
+      </li>
+      <li>
+        <span class="step-num"></span>
+        <div>
+          <div class="step-title">Bulk Production</div>
+          <div class="step-desc">Production begins after sample sign-off and deposit. AQL inspection before shipment.</div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <div class="cta-block">
+    <h2>Ready to Source Baby Sleeping Bags?</h2>
+    <p>Send us your specs — TOG rating, fabric, quantity, and target price. We reply within 24 hours.</p>
+    <a href="mailto:quaner1234@gmail.com?subject=Baby Sleeping Bag Supplier Inquiry" class="cta-email">
+      quaner1234@gmail.com
+    </a>
+  </div>
+
+  <footer>
+    <p>© {new Date().getFullYear()} Taian Lianchuang Textile Co., Ltd. &nbsp;·&nbsp; <a href="/">lianchuangbaby.com</a></p>
+  </footer>
+
+</body>
+</html>
