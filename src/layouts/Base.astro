@@ -3,11 +3,13 @@ export interface Props {
   title: string;
   description?: string;
   canonical?: string;
+  noindex?: boolean;
 }
 const {
   title,
   description = "Custom baby sleeping bag manufacturer — GOTS & BSCI certified OEM/ODM factory in China. TOG 0.5–3.5, organic cotton, bamboo & merino. Low MOQ from 300 pcs.",
   canonical = Astro.url.href,
+  noindex = false,
 } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -18,6 +20,7 @@ const {
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
 
   <!-- Open Graph -->
   <meta property="og:title" content={title} />
